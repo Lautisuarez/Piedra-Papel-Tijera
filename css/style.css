@@ -1,3 +1,13 @@
+:root{
+    --primario: #e1b12c;
+    --primarioClaro: #fbc531;
+    --secundario: #273c75;
+    --secundarioOscuro: #192a56;
+    --secundarioClaro: #40739e;
+    --terciario: #b71540;
+    --manos: #fad390;
+    --stylePrimary: 'Reggae One', cursive;
+}
 html {
     box-sizing: border-box;
     min-height: 100%;
@@ -6,9 +16,99 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+body{
+    background-color: var(--primario);
+    font-family: var(--stylePrimary);
+}
 
 /* UTILIDADES */
 .contenedor{
-    max-width: 90%;
+    max-width: 70%;
     margin: 0 auto;
+}
+
+/* HEADER */
+.navegacion h1{
+    color: var(--secundario);
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+/* CONTADOR */
+.contador{
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    border: 3px solid var(--secundarioOscuro);
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--secundarioClaro);
+    height: 8vh;
+}
+.contador .jugador{
+    display: flex;
+}
+.contador .jugador p{
+    margin-right: 2rem;
+}
+.contador .jugador p:last-of-type{
+    margin: 0;
+}
+.contador p{
+    margin: 0;
+}
+/* JUEGO */
+.tablero{
+    height: 60vh;
+    display: grid;
+    grid: repeat(3, 1fr) / 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2rem;
+}
+.jugador1{
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 10rem;
+    color: var(--manos);
+}
+.versus{
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 15rem;
+    margin: 0;
+    color: var(--terciario);
+}
+.jugador2{
+    grid-column: 3;
+    grid-row: 3;
+    font-size: 10rem;
+    color: var(--manos);
+}
+
+/* OPCIONES */
+.opciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    border: 1px solid var(--terciario);
+    border-radius: 1rem;
+}
+.contenido-opciones{
+    font-size: 10rem;
+    color: var(--manos);
+    width: 100%;
+    text-align: center;
+    border-right: 1px solid var(--terciario);
+    transition: .5s;
+}
+.contenido-opciones:last-of-type{
+    border: none;
+}
+.contenido-opciones:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: #e2c085;
 }

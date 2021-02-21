@@ -7,11 +7,42 @@
     <title>Piedra, papel o Tijera</title>
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <!-- HEADER -->
+    <header class="contenedor">
+        <nav class="navegacion">
+            <h1>Piedra, Papel o Tijera</h1>
+        </nav>
+    </header>
+
+    <!-- CONTADOR -->
+    <div class="contenedor">
+        <div class="contador">
+            <div class="jugador"><p>Tú: </p><p id="jugador1">0</p></div>
+            <p>-</p>
+            <div class="jugador"><p>CPU: </p><p id="cpu">0</p></div>
+        </div>
+    </div>
+
+    <!-- JUEGO -->
+    <main class="contenedor tablero">
+        <div class="jugador1"><i class="fas fa-hand-rock"></i></div>
+        <p class="versus">vs</p>
+        <div class="jugador2"><i class="fas fa-hand-scissors"></i></div>
+    </main>
+
+    <!-- OPCIONES DEL JUGADOR -->
+    <div class="contenedor opciones">
+        <div class="contenido-opciones" id="piedra"><i class="fas fa-hand-rock"></i></div>
+        <div class="contenido-opciones" id="tijera"><i class="fas fa-hand-scissors"></i></div>
+        <div class="contenido-opciones" id="papel"><i class="fas fa-hand-paper"></i></div>
+    </div>
 
     <!-- CUSTOM JAVASCRIPT -->
     <script src="js/script.js"></script>
