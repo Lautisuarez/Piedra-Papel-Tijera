@@ -24,24 +24,31 @@
     <!-- CONTADOR -->
     <div class="contenedor">
         <div class="contador">
-            <div class="jugador"><p>Tú: </p><p id="jugador1">0</p></div>
+            <div class="jugador"><p>Tú: </p><p id="jugador" value="0">0</p></div>
             <p>-</p>
-            <div class="jugador"><p>CPU: </p><p id="cpu">0</p></div>
+            <div class="jugador"><p>CPU: </p><p id="cpu" value="0">0</p></div>
         </div>
     </div>
 
     <!-- JUEGO -->
     <main class="contenedor tablero">
-        <div class="jugador1"><i class="fas fa-hand-rock"></i></div>
+        <div class="jugador1" id="jugador1">Tú</div>
         <p class="versus">vs</p>
-        <div class="jugador2"><i class="fas fa-hand-scissors"></i></div>
+        <div class="jugador2" id="jugador2">CPU</div>
     </main>
 
     <!-- OPCIONES DEL JUGADOR -->
-    <div class="contenedor opciones">
-        <div class="contenido-opciones" id="piedra"><i class="fas fa-hand-rock"></i></div>
-        <div class="contenido-opciones" id="tijera"><i class="fas fa-hand-scissors"></i></div>
-        <div class="contenido-opciones" id="papel"><i class="fas fa-hand-paper"></i></div>
+    <div class="contenedor opciones" id="opciones">
+        <div class="contenido-opciones" id="piedra"><i value="1" class="fas fa-hand-rock"></i></div>
+        <div class="contenido-opciones" id="tijera"><i value="2" class="fas fa-hand-scissors"></i></div>
+        <div class="contenido-opciones" id="papel"><i value="3" class="fas fa-hand-paper"></i></div>
+    </div>
+
+    <!-- GANADOR -->
+    <div class="ganador" id="cuadro-ganador">
+        <p>El ganador es:</p>
+        <h2 id="ganador"></h2>
+        <a href="javascript:location.reload()" class="btn btn-primario">Reiniciar</a>
     </div>
 
     <!-- CUSTOM JAVASCRIPT -->
